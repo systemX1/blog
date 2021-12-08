@@ -1,0 +1,11 @@
+site_name: systemx1's blog
+site_url:  http://www.blog.systemxrs.com/
+nav:
+    - Home: index.md
+    - MIT6.824: 
+        - 'Lab1 MapReduce': 'MIT6.824/Lab1 MapReduce.md'
+        - GFS: 'MIT6.824/GFS.md'
+        - Raft: 'MIT6.824/Lab2 Raft.md'
+    - About: about.md
+theme: rtd-dropdown
+
