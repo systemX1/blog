@@ -7,10 +7,12 @@ nav:
     - Home: index.md
     - MIT6.824: 
         - 'Lab1 MapReduce': 'MIT6.824/Lab1 MapReduce.md'
-        - GFS: 'MIT6.824/GFS.md'
+        - GFS: 'MIT6.824/GFS Paper Notes.md'
         - Raft: 'MIT6.824/Lab2 Raft.md'
+        - 'Raft Paper': 'MIT6.824/Raft Paper Notes.md'
     - About: about.md
 theme: material
 #pip install material
-#mkdocs serve --dev-addr=127.0.0.1:10000
+#mkdocs serve --dev-addr=0.0.0.0:10000
+
 

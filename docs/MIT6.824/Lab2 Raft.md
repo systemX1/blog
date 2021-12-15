@@ -1,5 +1,3 @@
-
-
 ## **Debug建议**
 
 善用https://raft.github.io/上的可视化。server，AppendEntries RPC和RequestVote RPC(传递的小球)等都是可以点击和设置的，不确定某一个条件具体该怎么设置或者懒得从头到尾再翻一遍论文的时候很有帮助
@@ -8,11 +6,11 @@ Lab2将作为之后实验的基础，保证没有bug很重要。如果只跑个�
 
 例如2A
 
-<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-653bb1a3aeeae85a97e8c5b97823038e-Raft2Adebug.png" style="zoom:67%;" />
+<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-653bb1a3aeeae85a97e8c5b97823038e-Raft2Adebug.png" style="zoom: 33%;" />
 
 
 
-![](https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-c46fe187d37662a6706134924e4e9cee-Raft2AdebugLog8err.png)
+<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-c46fe187d37662a6706134924e4e9cee-Raft2AdebugLog8err.png" style="zoom: 25%;" />
 
 
 
@@ -22,7 +20,7 @@ Lab2将作为之后实验的基础，保证没有bug很重要。如果只跑个�
 
 **实验结果**
 
-<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-c0a6bcdcfff42ce53b6b85223f87676f-Raft2Apass.png" style="zoom: 50%;" />
+<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-c0a6bcdcfff42ce53b6b85223f87676f-Raft2Apass.png" style="zoom: 33%;" />
 
 <img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211213131742-f99c33d2077f36bb09286cd0ed785a85-Raft2Apass2.png" style="zoom:50%;" />
 
