@@ -1,10 +1,18 @@
-## 实验结果
+## **论文笔记**
+
+
+
+
+
+
+
+## **实验结果**
 
 <img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211208190000-fd174d3bf1f6dab2424b7c9cc7331599-MapReducePass-bad0a1.png" style="zoom:50%;" />
 
-## 实现思路
+## **实现思路**
 
-### 数据结构
+### **数据结构**
 
 用一个枚举类型State表示Master, Worker, MapTask和ReduceTask当前状态, 初始状态都为Spare
 
@@ -48,7 +56,7 @@ type Master struct {
 }
 ```
 
-### 大致思路
+### **大致思路**
 
 这个Lab没有什么算法，基本上是工程问题
 
@@ -86,7 +94,7 @@ Worker启动时调用Master.Register RPC进行注册，添加到Master的workers
 
 ​	处于Reducing状态时 细节稍有不同但基本同上
 
-### RPC处理函数
+### **RPC处理函数**
 
 **Worker.DoMap** go doMap2()新建一个goroutine执行Map任务，返回
 
@@ -104,11 +112,11 @@ Worker启动时调用Master.Register RPC进行注册，添加到Master的workers
 
 **Master.ReportReduceState** 基本同上
 
-### 一些细节
+### **一些细节**
 
-对可能被多个goroutine读写的数据操作前后sync.Mutex加锁，性能有影响，不知道之后有没有更优雅的办法；go build或者run的时候 -race开启go的竞争检测
+对可能被多个goroutine读写的数据操作前后sync.Mutex加锁，性能有影响，不知道之后有没有更简洁完善的办法；go build或者run的时候 -race开启go的竞争检测
 
-#### 计时器
+#### **计时器**
 
 对worker的计时简单地用time包封装了两个函数用来新建和重置定时器
 
@@ -134,7 +142,7 @@ func (m *Master) stopResetTimer(t *time.Timer, d time.Duration) {
 
 master的心跳检查可以用time.Tick()，返回一个<-chan Time
 
-#### 命名
+#### **命名**
 
 WorkerID是一个16位随机字符串, 创建Worker时生成 
 
@@ -146,7 +154,7 @@ Worker Map结果文件名为"tmp-$MapTaskID-$ReduceTaskID"
 
 Reduce完成后文件名为"mr-out-$ReduceTaskID"
 
-## Debug
+## **Debug**
 
 用Golang自带的log包, 命令行执行的时候手动重定向"2>mr.log"到文件然后把log打印的行号和代码对照着debug
 
@@ -154,7 +162,7 @@ test-mr.sh做的事大致就是   单独测试可以复制一份自己改
 
 crash.go 每次map和reduce 
 
-## 论文笔记
+## 
 
 
 

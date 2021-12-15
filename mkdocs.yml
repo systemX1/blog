@@ -1,5 +1,8 @@
 site_name: systemx1's blog
-site_url:  http://www.blog.systemxrs.com/
+site_url: http://www.blog.systemxrs.com/
+repo_url: https://github.com/systemX1/blog/
+repo_name: blog
+dev_addr: 0.0.0.0:10000
 nav:
     - Home: index.md
     - MIT6.824: 
@@ -7,5 +10,7 @@ nav:
         - GFS: 'MIT6.824/GFS.md'
         - Raft: 'MIT6.824/Lab2 Raft.md'
     - About: about.md
-theme: rtd-dropdown
+theme: material
+#pip install material
+#mkdocs serve --dev-addr=127.0.0.1:10000
 

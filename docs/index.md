@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# Welcome to systemx1's blog
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For GitHub repository visit [systemX1/blog](https://github.com/systemX1/blog).
 
-## Commands
+## Contents
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+├── [  42]  about.md
+├── [4.0K]  Computer Networking A Top-Down Approach
+├── [4.0K]  CS144
+├── [4.0K]  CSAPP
+├── [4.1K]  Golang
+│   ├── [ 133]  basic_grammar.md
+│   └── [   0]  GMP_model.md
+├── [ 491]  index.md
+├── [ 21K]  MIT6.824
+│   ├── [   0]  Fault-Tolerant VM Paper Notes.md
+│   ├── [9.0K]  GFS Paper Notes.md
+│   ├── [4.3K]  Lab1 MapReduce.md
+│   ├── [1.7K]  Lab2 Raft.md
+│   └── [2.3K]  Raft Paper Notes.md
+└── [4.3K]  Tools
+    └── [ 331]  Leetcode.md
