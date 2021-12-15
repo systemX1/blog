@@ -74,7 +74,7 @@ docker container run \
   --name nginx-blog \
   --mount type=bind,source="$PWD/site",target=/usr/share/nginx/html \
   --mount type=bind,source="$PWD/conf",target=/etc/nginx \
-  -p 127.0.0.1:10000:80 \
+  -p 0.0.0.0:10000:80 \
   nginx
 ```
 

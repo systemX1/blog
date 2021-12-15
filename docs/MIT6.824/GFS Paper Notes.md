@@ -18,7 +18,7 @@ Clients interact with the master for metadata operations, but all data-bearing c
 
 High sustained bandwidth is more important than low latency,  and mutated more by appending new data rather than overwriting existing data.
 
-<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211209133846-29e6d40479853ee5a655cf60a3daaab1-GFSFigure1.png" style="zoom:40%;" />
+<img src="https://gitee.com/systemX1/image-hosting-service/raw/main/img/6824/20211209133846-29e6d40479853ee5a655cf60a3daaab1-GFSFigure1.png" style="zoom:35%;" />
 
 ### **Chunk Size**
 
