@@ -14,27 +14,27 @@ For GitHub repository visit [systemX1/blog](https://github.com/systemX1/blog).
 
 ├── [4.1K]  Golang
 
-│   ├── [ 133]  basic_grammar.md
+│&nbsp;&nbsp;&nbsp;&nbsp;├── [ 133]  basic_grammar.md
 
-│   └── [   0]  GMP_model.md
+│&nbsp;&nbsp;&nbsp;&nbsp;└── [   0]  GMP_model.md
 
 ├── [ 491]  index.md
 
 ├── [ 21K]  MIT6.824
 
-│   ├── [   0]  Fault-Tolerant VM Paper Notes.md
+│&nbsp;&nbsp;&nbsp;&nbsp;├── [   0]  Fault-Tolerant VM Paper Notes.md
 
-│   ├── [9.0K]  GFS Paper Notes.md
+│&nbsp;&nbsp;&nbsp;&nbsp;├── [9.0K]  GFS Paper Notes.md
 
-│   ├── [4.3K]  Lab1 MapReduce.md
+│&nbsp;&nbsp;&nbsp;&nbsp;├── [4.3K]  Lab1 MapReduce.md
 
-│   ├── [1.7K]  Lab2 Raft.md
+│&nbsp;&nbsp;&nbsp;&nbsp;├── [1.7K]  Lab2 Raft.md
 
-│   └── [2.3K]  Raft Paper Notes.md
+│&nbsp;&nbsp;&nbsp;&nbsp;└── [2.3K]  Raft Paper Notes.md
 
 └── [4.3K]  Tools
 
-​    └── [ 331]  Leetcode.md
+&nbsp;&nbsp;&nbsp;&nbsp;└── [ 331]  Leetcode.md
 
 ## **Deployment**
 
@@ -51,6 +51,30 @@ kill -9 <pid>
 
 ```bash
 mkdocs build
+vim /etc/nginx/nginx.conf
+# 在http {}里添加以下内容
+server {
+    listen 			10000;
+    server_name		localhost;
+    
+    location / {
+    root <repo_dir>/site;
+    index index.html;
+    }
+}
+# restart nginx
+sudo systemctl restart nginx
+```
+或者使用docker
 
+```bash
+docker container run \
+  -d \
+  --rm \
+  --name nginx-blog \
+  --mount type=bind,source="$PWD/site",target=/usr/share/nginx/html \
+  --mount type=bind,source="$PWD/conf",target=/etc/nginx \
+  -p 127.0.0.1:10000:80 \
+  nginx
 ```
 
